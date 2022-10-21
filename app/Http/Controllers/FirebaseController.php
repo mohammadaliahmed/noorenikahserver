@@ -56,6 +56,7 @@ class FirebaseController extends Controller
             ->getSnapshot()->getValue();
 
 
+
         return view('pages.likes', ['likes' => $likes,'post'=>$post]);
     }
 }

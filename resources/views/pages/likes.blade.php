@@ -47,10 +47,11 @@
                 @endif
             </div>
         </div>
-        <div class="col-8">
+        <div class="col-lg-8 col-12">
+
             @if($likes!=null && sizeof($likes)>0)
                 @foreach($likes as $key => $like)
-                    @if(isset($likes['picUrl']))
+                    @if(isset($like['picUrl']))
                         <div class="card m-3">
                             <div class="row ">
                                 <div class="d-flex">

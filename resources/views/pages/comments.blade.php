@@ -47,7 +47,8 @@
                 @endif
             </div>
         </div>
-        <div class="col-8">
+        <div class="col-lg-8 col-12">
+
 
             @if($comments!=null && sizeof($comments)>0)
                 @foreach($comments as $key => $comment)
