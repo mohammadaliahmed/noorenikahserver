@@ -14,7 +14,7 @@
                             <div class="d-flex">
                                 <img class="m-2" style="border-radius: 50px"
                                      src="{{$post['userPicUrl']}}"
-                                     width="30">
+                                     width="40" height="40">
 
                                 <h6 class="m-2"> {{$post['userName']}}</h6>
 

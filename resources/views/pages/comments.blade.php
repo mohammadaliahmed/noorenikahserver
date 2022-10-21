@@ -10,7 +10,7 @@
                                 <a href="{{url('/viewProfile/'.\App\Models\Constants::getUserShareId($post['userId']))}}">
                                     <img class="m-2" style="border-radius: 50px"
                                          src="{{$post['userPicUrl']}}"
-                                         width="30">
+                                         width="40" height="40">
                                 </a>
                                 <a class="nav-link"
                                    href="{{url('/viewProfile/'.\App\Models\Constants::getUserShareId($post['userId']))}}">
