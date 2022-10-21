@@ -16,4 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [FirebaseController::class, 'GetAllPosts']);
+Route::get('/viewProfile/{id}', [FirebaseController::class, 'ViewProfile']);
+Route::get('/viewLikes/{id}', [FirebaseController::class, 'ViewLikes']);
+Route::get('/viewComments/{id}', [FirebaseController::class, 'ViewComments']);
 
