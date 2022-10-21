@@ -50,23 +50,25 @@
         <div class="col-8">
             @if($likes!=null && sizeof($likes)>0)
                 @foreach($likes as $key => $like)
-                    <div class="card m-3">
-                        <div class="row ">
-                            <div class="d-flex">
-                                <a href="{{url('/viewProfile/'.\App\Models\Constants::getUserShareId($like['phone']))}}">
-                                    <img class="m-2" style="border-radius: 50px"
-                                         src="{{$like['picUrl']}}"
-                                         width="40" height="40">
-                                </a>
-                                <a class="nav-link"
-                                   href="{{url('/viewProfile/'.\App\Models\Constants::getUserShareId($like['phone']))}}">
+                    @if(isset($likes['picUrl']))
+                        <div class="card m-3">
+                            <div class="row ">
+                                <div class="d-flex">
+                                    <a href="{{url('/viewProfile/'.\App\Models\Constants::getUserShareId($like['phone']))}}">
+                                        <img class="m-2" style="border-radius: 50px"
+                                             src="{{$like['picUrl']}}"
+                                             width="40" height="40">
+                                    </a>
+                                    <a class="nav-link"
+                                       href="{{url('/viewProfile/'.\App\Models\Constants::getUserShareId($like['phone']))}}">
 
-                                    <h6 class="mt-2"> {{$like['name']}}</h6>
-                                </a>
+                                        <h6 class="mt-2"> {{$like['name']}}</h6>
+                                    </a>
 
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    @endif
                 @endforeach
             @endif
 
