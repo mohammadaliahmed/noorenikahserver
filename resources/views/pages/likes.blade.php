@@ -1,7 +1,7 @@
 @extends('layouts.default')
 @section('content')
     <div class="row">
-        <div class="col-4">
+        <div class="col-lg-4 col-12">
             <div class="d-flex justify-content-center">
                 @if(isset($post['userName']))
                     <div class="card m-3">
