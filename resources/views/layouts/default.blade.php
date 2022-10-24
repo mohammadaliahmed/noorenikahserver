@@ -5,6 +5,16 @@
 <head>
     @include('includes.head')
 </head>
+<style>
+    .redBg{
+        background-color: #B70002;
+        color: #fff;
+    } .redBg:hover{
+        border: 1px solid #B70002;
+        color: #B70002;
+
+    }
+</style>
 <body style="background-color: #efefef">
 <div class="container">
     <header class="row">

@@ -1,5 +1,6 @@
 @extends('layouts.default')
 @section('content')
+
     @if($posts!=null && sizeof($posts)>0)
         @foreach($posts as $key => $post)
             <div class="row">
@@ -38,7 +39,8 @@
                                 <hr>
                                 <div class="row">
                                     <div class="d-flex justify-content-between">
-                                        <div class="p-2"><a class="nav-link" href="{{url('/viewLikes/'.$post['id'])}}">
+                                        <div class="p-2"><a class="nav-link"
+                                                            href="{{url('/viewLikes/'.$post['id'])}}">
                                                 {{$post['likeCount']}} likes</a></div>
                                         <div class="p-2"><a class="nav-link"
                                                             href="{{url('/viewComments/'.$post['id'])}}">{{$post['commentCount']}}
@@ -65,4 +67,5 @@
         </div>
 
     @endif
+
 @stop

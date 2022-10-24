@@ -13,11 +13,11 @@ class FirebaseController extends Controller
     public function GetAllPosts()
     {
         $posts = [];
-
-        $database = Constants::DatabaseReference();
-        $posts = $database->getReference('Posts')
-            ->getSnapshot()->getValue();
-        $posts = array_reverse($posts);
+//
+//        $database = Constants::DatabaseReference();
+//        $posts = $database->getReference('Posts')
+//            ->getSnapshot()->getValue();
+//        $posts = array_reverse($posts);
         return view('pages.home', ['posts' => $posts]);
 
     }
@@ -42,7 +42,7 @@ class FirebaseController extends Controller
             ->getSnapshot()->getValue();
 
 
-        return view('pages.comments', ['comments' => $comments,'post'=>$post]);
+        return view('pages.comments', ['comments' => $comments, 'post' => $post]);
 
     }
 
@@ -56,7 +56,16 @@ class FirebaseController extends Controller
             ->getSnapshot()->getValue();
 
 
+        return view('pages.likes', ['likes' => $likes, 'post' => $post]);
+    }
 
-        return view('pages.likes', ['likes' => $likes,'post'=>$post]);
+    public function SubmitProfile(Request $request)
+    {
+        if ($request->isMethod('post')) {
+            dd($request->ali);
+        } else {
+            return view('pages.submit');
+
+        }
     }
 }
