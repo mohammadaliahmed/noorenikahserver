@@ -16,7 +16,6 @@
                                     </a>
                                     <a class="nav-link"
                                        href="{{url('/viewProfile/'.\App\Models\Constants::getUserShareId($post['userId']))}}">
-
                                         <h6 class="mt-2"> {{$post['userName']}}</h6>
                                     </a>
 
