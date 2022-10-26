@@ -1,10 +1,10 @@
 @extends('layouts.default')
 @section('content')
 
-    <form class="m-5 card p-5" method="post">
+    <form class="m-2 card p-2" method="post">
         <h3>Submit your profile</h3>
         @csrf
-        <div class="row m-3">
+        <div class="row m-2">
 
             <div class="d-flex justify-content-center">
                 <div>
@@ -14,21 +14,21 @@
             </div>
         </div>
         <div class="row mt-5">
-            <div class="col-lg-6 col-6">
+            <div class="col-lg-6 col-12">
                 <label>Enter name</label>
                 <input type="text" class="form-control" name="name">
             </div>
-            <div class="col-lg-6 col-6">
+            <div class="col-lg-6 col-12">
                 <label>Enter Phone</label>
                 <input type="text" class="form-control" name="name">
             </div>
         </div>
         <div class="row mt-5">
-            <div class="col-lg-4 col-6">
+            <div class="col-lg-4 col-12">
                 <label>Enter Age</label>
                 <input type="text" class="form-control" name="age">
             </div>
-            <div class="col-lg-4 col-6">
+            <div class="col-lg-4 col-12">
                 <label>Select Gender</label>
                 <br>
                 <div class="d-flex justify-content-start">
@@ -38,7 +38,7 @@
                         <input class="m-3" type="radio" value="female" name="gender">Female</label>
                 </div>
             </div>
-            <div class="col-lg-4 col-6">
+            <div class="col-lg-4 col-12">
                 <label>Select Marital Status</label>
                 <br>
                 <select name="marital_status" class="form-control">
@@ -51,15 +51,15 @@
             </div>
         </div>
         <div class="row mt-5">
-            <div class="col-lg-4 col-6">
+            <div class="col-lg-4 col-12">
                 <label>Enter City</label>
                 <input type="text" class="form-control" name="city">
             </div>
-            <div class="col-lg-4 col-6">
+            <div class="col-lg-4 col-12">
                 <label>Enter Cast</label>
                 <input type="text" class="form-control" name="cast">
             </div>
-            <div class="col-lg-4 col-6">
+            <div class="col-lg-4 col-12">
                 <label>Enter Religion</label>
                 <input type="text" class="form-control" name="religion">
             </div>
