@@ -74,9 +74,9 @@
 
                                             @endphp</small>
                                     </a>
-                                    <pre>
+
                                     {{$comment['comment']}}
-                                    </pre>
+
 
                                 </div>
 
@@ -108,9 +108,9 @@
 
                                                         @endphp</small>
                                                 </a>
-                                                <pre>
+
                                                 {{$reply['comment']}}
-                                                </pre>
+
 
                                             </div>
 
