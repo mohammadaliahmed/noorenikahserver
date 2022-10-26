@@ -14,10 +14,10 @@ class FirebaseController extends Controller
     {
         $posts = [];
 //
-//        $database = Constants::DatabaseReference();
-//        $posts = $database->getReference('Posts')
-//            ->getSnapshot()->getValue();
-//        $posts = array_reverse($posts);
+        $database = Constants::DatabaseReference();
+        $posts = $database->getReference('Posts')
+            ->getSnapshot()->getValue();
+        $posts = array_reverse($posts);
         return view('pages.home', ['posts' => $posts]);
 
     }
