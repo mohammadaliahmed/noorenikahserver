@@ -1,4 +1,4 @@
-<div class="d-flex justify-content-start h-100 border">
+<div class="d-flex justify-content-start bg-light h-100 border">
     <div>
         <a class="navbar-brand" href="{{url('/')}}"><img src="{{url('/images/couple.png')}}" width=80><br>
 
