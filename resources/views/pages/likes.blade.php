@@ -22,7 +22,9 @@
                         </div>
                         <div class="row">
                             @if($post['type']=='image')
-                                <div class="p-4"> {{$post['text']}}
+                                <div class="p-4">
+                                    <pre>{!! $post['text'] !!}</pre>
+
                                 </div>
                                 <img
                                     src="{{$post['imageUrl']}}"
