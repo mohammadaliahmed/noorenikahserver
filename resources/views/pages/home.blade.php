@@ -7,6 +7,7 @@
                 @if(isset($post['userName']))
                     <div class="col-lg-4 col-12">
                         <div class="card m-3">
+
                             <div class="row">
                                 <div class="d-flex">
                                     <a href="{{url('/viewProfile/'.\App\Models\Constants::getUserShareId($post['userId']))}}">
