@@ -19,11 +19,13 @@
 
 
     body {
-        background: url(images/bg.jpg) no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
+        background: url(images/bg.jpg) ;
+        min-height: 100%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;}
+
     }
 </style>
 {{--<body style="background-color: #efefef">--}}
