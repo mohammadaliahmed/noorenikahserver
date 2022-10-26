@@ -27,7 +27,7 @@
                                 @if($post['type']=='image')
                                     <div class="p-4">
 
-
+                                    <pre>
                                         {!! $post['text']!!}
                                         </pre>
                                     </div>
