@@ -25,13 +25,18 @@
                             </div>
                             <div class="row">
                                 @if($post['type']=='image')
-                                    <div class="p-4"> {{$post['text']}}
+                                    <div class="p-4">
+
+
+                                        {!! $post['text']!!}
+                                        </pre>
                                     </div>
                                     <img
                                         src="{{$post['imageUrl']}}"
                                         width="200" height="400">
                                 @elseif($post['type']=='text')
-                                    <div class="p-4"> {{$post['text']}}
+                                    <div class="p-4">
+                                        <pre> {!! $post['text']!!}</pre>
                                     </div>
                                 @endif
 
