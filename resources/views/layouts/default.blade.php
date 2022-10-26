@@ -19,7 +19,7 @@
 
 
     body {
-        background: url(images/bg.jpg) ;
+        background: url({{url('/images/bg.jpg')}}) ;
         min-height: 100%;
         background-repeat: no-repeat;
         background-attachment: fixed;
