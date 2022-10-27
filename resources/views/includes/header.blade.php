@@ -5,7 +5,7 @@
             <span style="font-family: cursive;color: #B70002">Noor-e-Nikah</span>
         </a>
     </div>
-    <div class="my-auto m-2">
+    <div class="my-auto m-1">
         <a href="{{url('/')}}/submitProfile">
 
             <button class="btn btn-sm redBg">
@@ -13,11 +13,19 @@
             </button>
         </a>
     </div>
-    <div class="my-auto m-2">
+    <div class="my-auto m-1">
         <a href="https://www.youtube.com/c/Worldy360/videos">
             <button class="btn btn-sm redBg">
                 Rishta Videos
             </button>
+        </a>
+    </div>
+    <div class="my-auto m-1">
+        <a href="https://play.google.com/store/apps/details?id=com.appsinventiv.noorenikah">
+            <button class="btn btn-sm btn-outline-warning">
+                Download app
+            </button>
+
         </a>
     </div>
 

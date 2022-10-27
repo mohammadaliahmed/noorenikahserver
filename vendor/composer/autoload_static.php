@@ -629,7 +629,7 @@ class ComposerStaticInitc437b3002f4c8d05124d3a0c414a6a0e
         'App\\Http\\Middleware\\ValidateSignature' => __DIR__ . '/../..' . '/app/Http/Middleware/ValidateSignature.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Models\\Constants' => __DIR__ . '/../..' . '/app/Models/Constants.php',
-        'App\\Models\\ProfilesModel' => __DIR__ . '/../..' . '/app/Models/ProfilesModel.php',
+        'App\\Models\\Profiles' => __DIR__ . '/../..' . '/app/Models/Profiles.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',

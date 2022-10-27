@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('profiles', function (Blueprint $table) {
+        Schema::create('proposals', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('phone');
@@ -22,8 +22,9 @@ return new class extends Migration
             $table->string('cast')->nullable();
             $table->string('religion')->nullable();
             $table->string('marital_status')->nullable();
-            $table->integer('age')->nullable();
             $table->text('about')->nullable();
+            $table->integer('age')->nullable();
+            $table->string('education')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
@@ -36,6 +37,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('profiles');
+        Schema::dropIfExists('proposals');
     }
 };

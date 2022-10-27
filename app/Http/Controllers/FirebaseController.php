@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Constants;
+use App\Models\Profiles;
+use App\Models\Proposals;
 use Illuminate\Http\Request;
+use JetBrains\PhpStorm\NoReturn;
 use Kreait\Firebase\Factory;
 
 class FirebaseController extends Controller
@@ -62,10 +65,66 @@ class FirebaseController extends Controller
     public function SubmitProfile(Request $request)
     {
         if ($request->isMethod('post')) {
-            dd($request->ali);
+            $Profile = new Profiles();
+            $Profile->name = $request->name;
+            $Profile->phone = $request->phone;
+            $Profile->age = $request->age;
+            $Profile->gender = $request->gender;
+            $Profile->education = $request->education;
+            $Profile->city = $request->city;
+            $Profile->cast = $request->cast;
+            $Profile->religion = $request->religion;
+            $Profile->marital_status = $request->marital_status;
+            $Profile->about = $request->about;
+            $Profile->proposal_id = 1;
+            $Profile->save();
+            return redirect('/');
+
+
         } else {
             return view('pages.submit');
 
         }
+    }
+
+    public function AddProposal(Request $request)
+    {
+        if ($request->isMethod('post')) {
+            $Proposal = new Proposals();
+            $Proposal->name = $request->name;
+            $Proposal->phone = $request->phone;
+            $Proposal->age = $request->age;
+            $Proposal->education = $request->education;
+            $Proposal->gender = $request->gender;
+            $Proposal->city = $request->city;
+            $Proposal->cast = $request->cast;
+            $Proposal->religion = $request->religion;
+            $Proposal->marital_status = $request->marital_status;
+            $Proposal->about = $request->about;
+            $Proposal->save();
+            return redirect('/');
+
+
+        } else {
+            return view('pages.addProposal');
+
+        }
+    }
+
+    public function ListProposals()
+    {
+
+        $proposal = new Proposals();
+        $proposals = $proposal->GetAllProposals();
+        return view('pages.proposalList', ['proposals' => $proposals]);
+    }
+
+    public function ViewProposal($Id)
+    {
+
+        $proposal = new Proposals();
+        $proposal = $proposal->GetProposal($Id);
+        return view('pages.viewProposal',['proposal'=>$proposal]);
+
     }
 }

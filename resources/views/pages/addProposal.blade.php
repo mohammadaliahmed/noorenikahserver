@@ -2,7 +2,7 @@
 @section('content')
 
     <form class="m-2 card p-2" method="post">
-        <h3>Submit your profile</h3>
+        <h3>Add Proposal</h3>
         @csrf
 
         <div class="row m-3">
@@ -15,7 +15,7 @@
                 <input type="text" class="form-control" required name="phone">
             </div>
             <div class="col-lg-4 col-12">
-                <label>Education</label>
+                <label>Enter Education</label>
                 <input type="text" class="form-control" required name="education">
             </div>
         </div>
@@ -62,9 +62,9 @@
 
         </div>
         <div class="row m-3">
-            <label>About yourself</label>
+            <label>About</label>
 
-            <textarea name="about" placeholder="About yourself" class="col-12 form-control">
+            <textarea name="about" placeholder="About" class="col-12 form-control">
 
             </textarea>
         </div>

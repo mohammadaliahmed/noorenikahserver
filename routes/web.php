@@ -22,3 +22,9 @@ Route::get('/viewComments/{id}', [FirebaseController::class, 'ViewComments']);
 Route::get('/submitProfile/', [FirebaseController::class, 'SubmitProfile']);
 Route::post('/submitProfile/', [FirebaseController::class, 'SubmitProfile']);
 
+
+Route::get('/addProposal/', [FirebaseController::class, 'AddProposal']);
+Route::post('/addProposal/', [FirebaseController::class, 'AddProposal']);
+
+Route::get('/listProposals/', [FirebaseController::class, 'ListProposals']);
+Route::get('/viewProposal/{id}', [FirebaseController::class, 'ViewProposal']);
