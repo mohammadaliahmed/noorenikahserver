@@ -22,4 +22,18 @@ class Profiles extends Model
         return $this->where('proposal_id', $id)->get();
     }
 
+    function GetRelatedProfiles($proposal)
+    {
+
+        if ($proposal->getnder == 'male') {
+            $gen = 'female';
+        } else {
+            $gen = 'male';
+        }
+
+        return $this
+            ->where('gender',$gen)
+            ->get();
+    }
+
 }

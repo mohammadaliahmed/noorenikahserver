@@ -99,7 +99,32 @@
                         <span><strong>Cast: </strong>{{$profile->cast}}</span>
                         <span><strong>Marital Status: </strong>{{$profile->marital_status}}</span>
                         <div class="d-flex justify-content-center">
-                            <a href="{{url('/viewSubmittedProfile/'.$profile->id)}}"> <button class="btn btn-sm m-2 redBg">View</button></a>
+                            <a href="{{url('/viewSubmittedProfile/'.$profile->id)}}">
+                                <button class="btn btn-sm m-2 redBg">View</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
+    <div class="card  m-3 p-3" style="background: #ffebeb">
+        <h3>Related Profiles for {{$proposal->name}}</h3>
+        <div class="row">
+            @foreach($relatedProfiles as $profile)
+                <div class="col-lg-3 col-6 m-2">
+                    <div class="card p-3">
+                        <span><strong>Name: </strong>{{$profile->name}}</span>
+                        <span><strong>Phone: </strong>{{$profile->phone}}</span>
+                        <span><strong>Age: </strong>{{$profile->age}}</span>
+                        <span><strong>Gender: </strong>{{$profile->gender}}</span>
+                        <span><strong>City: </strong>{{$profile->city}}</span>
+                        <span><strong>Cast: </strong>{{$profile->cast}}</span>
+                        <span><strong>Marital Status: </strong>{{$profile->marital_status}}</span>
+                        <div class="d-flex justify-content-center">
+                            <a href="{{url('/viewSubmittedProfile/'.$profile->id)}}">
+                                <button class="btn btn-sm m-2 redBg">View</button>
+                            </a>
                         </div>
                     </div>
                 </div>

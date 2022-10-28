@@ -37,9 +37,9 @@ class FirebaseController extends Controller
 
     function Submit()
     {
-        $proposals=new Proposals();
-        $proposals=$proposals->GetAllProposals();
-        return view('pages.submit',['proposals'=>$proposals]);
+        $proposals = new Proposals();
+        $proposals = $proposals->GetAllProposals();
+        return view('pages.submit', ['proposals' => $proposals]);
     }
 
     public function ViewComments($id)
@@ -69,7 +69,7 @@ class FirebaseController extends Controller
         return view('pages.likes', ['likes' => $likes, 'post' => $post]);
     }
 
-    public function SubmitProfile(Request $request,$id)
+    public function SubmitProfile(Request $request, $id)
     {
         if ($request->isMethod('post')) {
             $Profile = new Profiles();
@@ -83,15 +83,15 @@ class FirebaseController extends Controller
             $Profile->religion = $request->religion;
             $Profile->marital_status = $request->marital_status;
             $Profile->about = $request->about;
-            $Profile->proposal_id =$id;
+            $Profile->proposal_id = $id;
             $Profile->save();
             return redirect('/');
 
 
         } else {
-            $proposal=new Proposals();
-            $proposal=$proposal->GetProposal($id);
-            return view('pages.submitProfile',['proposal'=>$proposal]);
+            $proposal = new Proposals();
+            $proposal = $proposal->GetProposal($id);
+            return view('pages.submitProfile', ['proposal' => $proposal]);
 
         }
     }
@@ -136,7 +136,10 @@ class FirebaseController extends Controller
         $profileModel = new Profiles();
         $profiles = $profileModel->GetAllProfilesWithProposalId($Id);
 
-        return view('pages.viewProposal', ['proposal' => $proposal, 'profiles' => $profiles]);
+        $relatedProfiles = $profileModel->GetRelatedProfiles($proposal);
+
+        return view('pages.viewProposal', ['proposal' => $proposal, 'profiles' => $profiles,
+            'relatedProfiles' => $relatedProfiles]);
 
     }
 
