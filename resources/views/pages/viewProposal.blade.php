@@ -5,80 +5,80 @@
         <div class="row m-5">
             <div class="row">
                 <div class="d-flex justify-content-center">
-                    <div class="border border-secondary p-1" style="width: 150px">
+                    <div class="border border-secondary p-1 col-4">
                         Name
                     </div>
-                    <div class="border border-secondary p-1" style="width: 500px">
+                    <div class="border border-secondary p-1 col-8">
                         {{$proposal->name}}
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="d-flex justify-content-center">
-                    <div class="border border-secondary p-1" style="width: 150px">
+                    <div class="border border-secondary p-1  col-4">
                         Age
                     </div>
-                    <div class="border border-secondary p-1" style="width: 500px">
+                    <div class="border border-secondary p-1   col-8">
                         {{$proposal->age}}
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="d-flex justify-content-center">
-                    <div class="border border-secondary p-1" style="width: 150px">
+                    <div class="border border-secondary p-1  col-4">
                         Gender
                     </div>
-                    <div class="border border-secondary p-1" style="width: 500px">
+                    <div class="border border-secondary p-1   col-8">
                         {{$proposal->gender}}
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="d-flex justify-content-center">
-                    <div class="border border-secondary p-1" style="width: 150px">
+                    <div class="border border-secondary p-1  col-4">
                         City
                     </div>
-                    <div class="border border-secondary p-1" style="width: 500px">
+                    <div class="border border-secondary p-1   col-8">
                         {{$proposal->city}}
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="d-flex justify-content-center">
-                    <div class="border border-secondary p-1" style="width: 150px">
+                    <div class="border border-secondary p-1  col-4">
                         Cast
                     </div>
-                    <div class="border border-secondary p-1" style="width: 500px">
+                    <div class="border border-secondary p-1   col-8">
                         {{$proposal->cast}}
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="d-flex justify-content-center">
-                    <div class="border border-secondary p-1" style="width: 150px">
+                    <div class="border border-secondary p-1  col-4">
                         Religion
                     </div>
-                    <div class="border border-secondary p-1" style="width: 500px">
+                    <div class="border border-secondary p-1   col-8">
                         {{$proposal->religion}}
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="d-flex justify-content-center">
-                    <div class="border border-secondary p-1" style="width: 150px">
+                    <div class="border border-secondary p-1  col-4">
                         Marital Status
                     </div>
-                    <div class="border border-secondary p-1" style="width: 500px">
+                    <div class="border border-secondary p-1   col-8">
                         {{$proposal->marital_status}}
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="d-flex justify-content-center">
-                    <div class="border border-secondary p-1" style="width: 150px">
+                    <div class="border border-secondary p-1  col-4">
                         About
                     </div>
-                    <div class="border border-secondary p-1" style="width: 500px">
+                    <div class="border border-secondary p-1   col-8">
                         <pre>{{$proposal->about}}</pre>
                     </div>
                 </div>
