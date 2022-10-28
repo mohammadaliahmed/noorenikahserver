@@ -23,7 +23,6 @@ return new class extends Migration
             $table->string('religion')->nullable();
             $table->string('marital_status')->nullable();
             $table->integer('age')->nullable();
-            $table->text('about')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
