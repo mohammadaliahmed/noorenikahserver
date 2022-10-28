@@ -1,6 +1,21 @@
 @extends('layouts.default')
 @section('content')
     <div class="row">
+        <div class="d-flex justify-content-center">
+        </div>
+        <script async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8337731531668373"
+                crossorigin="anonymous"></script>
+        <!-- webbanner -->
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:728px;height:90px"
+             data-ad-client="ca-pub-8337731531668373"
+             data-ad-slot="9033264443"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+    <div class="row">
         @foreach($proposals as $proposal)
             <div class="col-lg-4 col-12">
                 <div class="card m-3 p-3">
@@ -65,10 +80,12 @@
                             About
                         </div>
                         <div class="border border-secondary p-1" style="width: 500px">
-                           {{$proposal->about}}
+                            {{$proposal->about}}
                         </div>
                     </div>
-                    <a href="submitProfile/{{$proposal->id}}"><button class="btn btn-sm w-100 mt-3 redBg">Submit profile</button> </a>
+                    <a href="submitProfile/{{$proposal->id}}">
+                        <button class="btn btn-sm w-100 mt-3 redBg">Submit profile</button>
+                    </a>
                 </div>
             </div>
 
