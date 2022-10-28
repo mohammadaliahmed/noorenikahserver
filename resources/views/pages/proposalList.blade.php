@@ -2,7 +2,13 @@
 @section('content')
 
     <div class="card mt-4">
-        <h3>List of proposals</h3>
+        <div class="row m-3 card-header">
+            <div class="d-flex  justify-content-between">
+                <h3>List of proposals</h3>
+                <a href="addProposal"><button class="btn btn-primary">Add Proposal</button> </a>
+            </div>
+        </div>
+
         <div class="table-responsive m-3">
             <table class="table table-striped">
                 <thead>

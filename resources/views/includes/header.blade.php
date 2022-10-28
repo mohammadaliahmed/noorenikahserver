@@ -6,7 +6,7 @@
         </a>
     </div>
     <div class="my-auto m-1">
-        <a href="{{url('/')}}/submitProfile">
+        <a href="{{url('/')}}/submit">
 
             <button class="btn btn-sm redBg">
                 Submit details

@@ -35,6 +35,13 @@ class FirebaseController extends Controller
         return view('pages.profile', ['user' => $user]);
     }
 
+    function Submit()
+    {
+        $proposals=new Proposals();
+        $proposals=$proposals->GetAllProposals();
+        return view('pages.submit',['proposals'=>$proposals]);
+    }
+
     public function ViewComments($id)
     {
         $database = Constants::DatabaseReference();
@@ -62,7 +69,7 @@ class FirebaseController extends Controller
         return view('pages.likes', ['likes' => $likes, 'post' => $post]);
     }
 
-    public function SubmitProfile(Request $request)
+    public function SubmitProfile(Request $request,$id)
     {
         if ($request->isMethod('post')) {
             $Profile = new Profiles();
@@ -76,13 +83,15 @@ class FirebaseController extends Controller
             $Profile->religion = $request->religion;
             $Profile->marital_status = $request->marital_status;
             $Profile->about = $request->about;
-            $Profile->proposal_id = 1;
+            $Profile->proposal_id =$id;
             $Profile->save();
             return redirect('/');
 
 
         } else {
-            return view('pages.submit');
+            $proposal=new Proposals();
+            $proposal=$proposal->GetProposal($id);
+            return view('pages.submitProfile',['proposal'=>$proposal]);
 
         }
     }
@@ -124,7 +133,21 @@ class FirebaseController extends Controller
 
         $proposal = new Proposals();
         $proposal = $proposal->GetProposal($Id);
-        return view('pages.viewProposal',['proposal'=>$proposal]);
+        $profileModel = new Profiles();
+        $profiles = $profileModel->GetAllProfilesWithProposalId($Id);
+
+        return view('pages.viewProposal', ['proposal' => $proposal, 'profiles' => $profiles]);
+
+    }
+
+    public function ViewSubmittedProfile($Id)
+    {
+
+        $profile = new Profiles();
+        $profile = $profile->GetProfile($Id);
+
+
+        return view('pages.viewSubmittedProfile', ['profile' => $profile]);
 
     }
 }

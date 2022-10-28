@@ -1,7 +1,13 @@
 @extends('layouts.default')
 @section('content')
     <div class="card m-3 p-3">
-        <h3>Viewing Proposal of {{$proposal->name}}</h3>
+        <div class="d-flex justify-content-between">
+            <h3>Viewing {{$profile->name}}</h3>
+            <div class="d-flex justify-content-center">
+                <a class="m-3" href="tel:{{$profile->phone}}"><i class="bi bi-telephone-outbound-fill"></i></a>
+                <a class="m-3" href="https://wa.me/{{$profile->phone}}"><i class="bi bi-whatsapp"></i></a>
+            </div>
+        </div>
         <div class="row m-5">
             <div class="row">
                 <div class="d-flex justify-content-center">
@@ -9,7 +15,7 @@
                         Name
                     </div>
                     <div class="border border-secondary p-1" style="width: 500px">
-                        {{$proposal->name}}
+                        {{$profile->name}}
                     </div>
                 </div>
             </div>
@@ -19,7 +25,7 @@
                         Age
                     </div>
                     <div class="border border-secondary p-1" style="width: 500px">
-                        {{$proposal->age}}
+                        {{$profile->age}}
                     </div>
                 </div>
             </div>
@@ -29,7 +35,7 @@
                         Gender
                     </div>
                     <div class="border border-secondary p-1" style="width: 500px">
-                        {{$proposal->gender}}
+                        {{$profile->gender}}
                     </div>
                 </div>
             </div>
@@ -39,7 +45,7 @@
                         City
                     </div>
                     <div class="border border-secondary p-1" style="width: 500px">
-                        {{$proposal->city}}
+                        {{$profile->city}}
                     </div>
                 </div>
             </div>
@@ -49,7 +55,7 @@
                         Cast
                     </div>
                     <div class="border border-secondary p-1" style="width: 500px">
-                        {{$proposal->cast}}
+                        {{$profile->cast}}
                     </div>
                 </div>
             </div>
@@ -59,7 +65,7 @@
                         Religion
                     </div>
                     <div class="border border-secondary p-1" style="width: 500px">
-                        {{$proposal->religion}}
+                        {{$profile->religion}}
                     </div>
                 </div>
             </div>
@@ -69,7 +75,7 @@
                         Marital Status
                     </div>
                     <div class="border border-secondary p-1" style="width: 500px">
-                        {{$proposal->marital_status}}
+                        {{$profile->marital_status}}
                     </div>
                 </div>
             </div>
@@ -79,31 +85,10 @@
                         About
                     </div>
                     <div class="border border-secondary p-1" style="width: 500px">
-                        <pre>{{$proposal->about}}</pre>
+                        <pre>{{$profile->about}}</pre>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="card  m-3 p-3" style="background: #eeeeee">
-        <h3>Profiles submitted for this {{$proposal->name}}</h3>
-        <div class="row">
-            @foreach($profiles as $profile)
-                <div class="col-lg-3 col-6 m-2">
-                    <div class="card p-3">
-                        <span><strong>Name: </strong>{{$profile->name}}</span>
-                        <span><strong>Phone: </strong>{{$profile->phone}}</span>
-                        <span><strong>Age: </strong>{{$profile->age}}</span>
-                        <span><strong>Gender: </strong>{{$profile->gender}}</span>
-                        <span><strong>City: </strong>{{$profile->city}}</span>
-                        <span><strong>Cast: </strong>{{$profile->cast}}</span>
-                        <span><strong>Marital Status: </strong>{{$profile->marital_status}}</span>
-                        <div class="d-flex justify-content-center">
-                            <a href="{{url('/viewSubmittedProfile/'.$profile->id)}}"> <button class="btn btn-sm m-2 redBg">View</button></a>
-                        </div>
-                    </div>
-                </div>
-            @endforeach
         </div>
     </div>
 
