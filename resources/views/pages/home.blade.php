@@ -2,18 +2,19 @@
 @section('content')
     <div class="row">
         <div class="d-flex justify-content-center">
+
+            <script async
+                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8337731531668373"
+                    crossorigin="anonymous"></script>
+            <!-- webbanner -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:728px;height:90px"
+                 data-ad-client="ca-pub-8337731531668373"
+                 data-ad-slot="9033264443"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
         </div>
-        <script async
-                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8337731531668373"
-                crossorigin="anonymous"></script>
-        <!-- webbanner -->
-        <ins class="adsbygoogle"
-             style="display:inline-block;width:728px;height:90px"
-             data-ad-client="ca-pub-8337731531668373"
-             data-ad-slot="9033264443"></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
     </div>
     <div class="container-fluid">
         <div class="row">
